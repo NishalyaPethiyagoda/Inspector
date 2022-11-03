@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "777001968919",
+    "project_id": "nishacomengp-123",
+    "storage_bucket": "nishacomengp-123.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777001968919:android:c497b6d06b44043d9c4352",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777001968919-70dqu3839t201jc112a4s88k44udp3dt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPAgROVKlbpuuLN5gBTVkBpoG1bco07Ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777001968919-70dqu3839t201jc112a4s88k44udp3dt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
