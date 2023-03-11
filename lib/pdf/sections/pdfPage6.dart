@@ -4,9 +4,10 @@ import 'dart:io';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:project/app_tree/data/SPHM/SPHMidwifeDATA.dart';
-import 'package:project/pdf/pdf_widgets/pdf_Q_&_A.dart';
-import 'package:project/pdf/pdf_widgets/pdf_3_YNRemark.dart';
-import 'package:project/pdf/pdf_widgets/pdfAdditionalQtxts.dart';
+import 'package:project/pdf/pdf_widgets/pdf_createPDFText.dart';
+import 'package:project/pdf/pdf_widgets/pdf_YNRemark.dart';
+
+import '../pdf_widgets/pdf_PositionedAns.dart';
 
 void page6(PdfDocument document, PdfFont contentFont) {
 //
@@ -43,13 +44,75 @@ void page6(PdfDocument document, PdfFont contentFont) {
       bounds: Rect.fromLTWH(horiStartPosi, currentPosiHeight, 0, 0))!;
 
   //a
-  newPosiHeight = createPDFTextEle(
+  newPosiHeight = positionedAnswers(
       currentPosiHeight,
       document,
       page,
       contentFont,
       40,
+      40,
+      4,
       'a.  To improve quality of service of PHMM :',
       'SPHM_DataSet.n1a');
+  currentPosiHeight = newPosiHeight + 12 * 4;
+  //b
+  newPosiHeight = positionedAnswers(
+      currentPosiHeight,
+      document,
+      page,
+      contentFont,
+      40,
+      40,
+      3,
+      'b.  To strengthen the managemnt information system :',
+      'SPHM_DataSet.n1b');
+  currentPosiHeight = newPosiHeight + 12 * 4 + 4;
+  //2
+  newPosiHeight = positionedAnswers(
+      currentPosiHeight,
+      document,
+      page,
+      contentFont,
+      0,
+      40,
+      1,
+      '2. Does she cooperate with other members of the staff maintaining the team spirit :',
+      'SPHM_DataSet.n2');
   currentPosiHeight = newPosiHeight;
+  // //3
+  // newPosiHeight = positionedAnswers(
+  //     currentPosiHeight,
+  //     document,
+  //     page,
+  //     contentFont,
+  //     0,
+  //     40,
+  //     1,
+  //     '3. Interventions done to upgrade the health status in the field :',
+  //     'SPHM_DataSet.n3');
+  // currentPosiHeight = newPosiHeight;
+  // //4
+  // newPosiHeight = positionedAnswers(
+  //     currentPosiHeight,
+  //     document,
+  //     page,
+  //     contentFont,
+  //     0,
+  //     40,
+  //     1,
+  //     '4. Communication skills - Action taken to imporove her communication skills :',
+  //     'SPHM_DataSet.n4');
+  // currentPosiHeight = newPosiHeight;
+  // //5
+  // newPosiHeight = positionedAnswers(
+  //     currentPosiHeight,
+  //     document,
+  //     page,
+  //     contentFont,
+  //     0,
+  //     40,
+  //     1,
+  //     '5. Number of training programs participated during the last 2 years :',
+  //     'SPHM_DataSet.n4');
+  // currentPosiHeight = newPosiHeight;
 }

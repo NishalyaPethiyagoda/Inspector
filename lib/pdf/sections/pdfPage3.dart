@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:project/app_tree/data/SPHM/SPHMidwifeDATA.dart';
-import 'package:project/pdf/pdf_widgets/pdf_Q_&_A.dart';
-import 'package:project/pdf/pdf_widgets/pdf_3_YNRemark.dart';
-import 'package:project/pdf/pdf_widgets/pdfAdditionalQtxts.dart';
+import 'package:project/pdf/pdf_widgets/pdf_createPDFText.dart';
+import 'package:project/pdf/pdf_widgets/pdf_YNRemark.dart';
+
 
 void page3(PdfDocument document, PdfFont contentFont) {
 //

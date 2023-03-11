@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/routes/routes.dart';
-import 'package:project/app_tree/home/SPHMi/0/zero.dart';
+import 'package:project/app_tree/home/SPHMi/0.dart';
 import 'package:project/app_tree/data/SPHM/SPHMdataStorage.dart';
 
 class SectionCard extends StatelessWidget {

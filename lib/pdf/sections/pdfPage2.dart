@@ -4,9 +4,8 @@ import 'dart:io';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:project/app_tree/data/SPHM/SPHMidwifeDATA.dart';
-import 'package:project/pdf/pdf_widgets/pdf_Q_&_A.dart';
-import 'package:project/pdf/pdf_widgets/pdf_3_YNRemark.dart';
-import 'package:project/pdf/pdf_widgets/pdfAdditionalQtxts.dart';
+import 'package:project/pdf/pdf_widgets/pdf_createPDFText.dart';
+import 'package:project/pdf/pdf_widgets/pdf_YNRemark.dart';
 
 void page2(PdfDocument document, PdfFont contentFont) {
 //
@@ -50,7 +49,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     2, // Qlinenum
     'The approved map of the MOH area is ', //Ql1
     'dispalyed', //ql2
@@ -72,7 +71,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     1, // Qlinenum
     'Demarcations of the PHM areas are marked ', //Ql1
     '', //ql2
@@ -94,13 +93,13 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     1, // Qlinenum
     //                                       '
     'Offices and clinics are marked in each  ',
     'PHM area',
     '',
-    "SPHM_DataSet.threA3YN",17,
+    "SPHM_DataSet.threA3YN", 17,
     "SPHM_DataSet.threA3",
   );
 //b
@@ -117,7 +116,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     'Statistics', // Qtype
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     2, // Qlinenum
     //                                       '
     'Estimated values of vital statistics of', //Ql1
@@ -140,7 +139,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '', // Qtype
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     2, // Qlinenum
     //                                       '
     'National, Provincial, District and MOH ', //Ql1
@@ -163,7 +162,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '', // Qtype
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     2, // Qlinenum
     //                                       '
     'Has she displayed achievements of vital', //Ql1
@@ -187,7 +186,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     'of clinics',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     1, // Qlinenum
     //                                       '
     'Details on her clinic area are displayed', //Ql1
@@ -210,7 +209,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     1, // Qlinenum
     //                                       '
     'Annual clinic plan of the area displayed', //Ql1
@@ -233,7 +232,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     1, // Qlinenum
     //                                            '
     'Clinic participation plan of PHM is available', //Ql1
@@ -256,7 +255,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     1, // Qlinenum
     //                                            '
     'schedule for field weighing is displayed', //Ql1
@@ -279,7 +278,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     2, // Qlinenum
     //                                            '
     'Specialized and special clinics in hospitals', //Ql1
@@ -303,7 +302,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     'program',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     1, // Qlinenum
     //                                            '
     'approved advanced program is displayed', //Ql1
@@ -348,7 +347,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     2, // Qlinenum
     //                                            '
     'It is planned according to the supervision', //Ql1
@@ -371,7 +370,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     3, // Qlinenum
     //                                            '
     'Specific areas such as Office, Field, Clinics', //Ql1
@@ -394,7 +393,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     3, // Qlinenum
     //                                            '
     'Dates of the monthly conferences, local', //Ql1
@@ -419,7 +418,7 @@ void page2(PdfDocument document, PdfFont contentFont) {
     '',
     '',
     60, //Q_hori_start posi
-    214, //Q_hori_end posi
+    216, //Q_hori_end posi
     3, // Qlinenum
     //                                            '
     'Details on population, number of houses, ', //Ql1
@@ -430,30 +429,30 @@ void page2(PdfDocument document, PdfFont contentFont) {
     "SPHM_DataSet.threE1",
   );
   //f
-    //1.
-    currentPosiHeight = pdfYNRemark(
-      currentPosiHeight,
-      document,
-      page,
-      contentFont,
-      0, //horiStartPosi
-      'f',
-      1, // Qtypelinenum
-      'Graphs', // Qtype
-      '',
-      '',
-      60, //Q_hori_start posi
-      214, //Q_hori_end posi
-      3, // Qlinenum
-      //                                            '
-      'Antenatal Care, pregnancy outcomes, postnatal', //Ql1
-      'number of eligible families are updated', //Ql2
-      'care, family planing of past 2 years', //Ql3
-      "SPHM_DataSet.threF1YN",
-      17,
-      "SPHM_DataSet.threF1",
-    );
-    //
+  //1.
+  currentPosiHeight = pdfYNRemark(
+    currentPosiHeight,
+    document,
+    page,
+    contentFont,
+    0, //horiStartPosi
+    'f',
+    1, // Qtypelinenum
+    'Graphs', // Qtype
+    '',
+    '',
+    60, //Q_hori_start posi
+    216, //Q_hori_end posi
+    3, // Qlinenum
+    //                                            '
+    'Antenatal Care, pregnancy outcomes,postnatal', //Ql1
+    'number of eligible families are updated', //Ql2
+    'care, family planing of past 2 years', //Ql3
+    "SPHM_DataSet.threF1YN",
+    17,
+    "SPHM_DataSet.threF1",
+  );
+  //
   ///
 /////////////////////////////////////   section 4 ////////////////////////
   ///

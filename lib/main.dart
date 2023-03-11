@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:project/routes/routes.dart';
 import 'package:project/app_tree/screens/loading.dart';
 import 'package:project/app_tree/data/SPHM/SPHMdataStorage.dart';
+import 'package:project/app_tree/screens/home.dart';
 
 bool GlobalKey = true;
 
-void main() async {
+void main() async 
+{
   // if (GlobalKey) {
   WidgetsFlutterBinding.ensureInitialized();
   await SPHMSecureStorage.checkFirstTimeWrite();
@@ -33,8 +35,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter',
       routes: AppRoutes.define(),
 
-      // //home: Home(),
-      home: LoadingScr(),
+      home: Home(),
+      //home: LoadingScr(),
       // initialRoute: ,
     );
   }

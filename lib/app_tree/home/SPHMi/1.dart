@@ -4,22 +4,19 @@ import 'package:project/widgets/textfields/yesNo.dart';
 //import 'package:project/widgets/checkBox.dart';
 import 'package:project/app_tree/data/SPHM/SPHMidwifeDATA.dart';
 import 'package:project/app_tree/data/SPHM/SPHMdataStorage.dart';
+import 'package:project/app_tree/data/SPHM/SPHMidwifeDATA.dart';
 
 class SPHM_basic_info extends StatefulWidget {
-  const SPHM_basic_info({Key? key}) : super(key: key);
+  SPHM_basic_info({Key? key}) : super(key: key);
 
   @override
   State<SPHM_basic_info> createState() => _SPHM_basic_infoState();
 }
 
 class _SPHM_basic_infoState extends State<SPHM_basic_info> {
-  // String variabale = SPHM_Data_MAP["SPHM_DataSet.population"]!;
-  // void initState() {
-  //   super.initState();
-
-  // }
-
-//
+  
+  late SPHM_Data data;
+  
   @override
   Widget build(BuildContext context) {
     //
@@ -72,28 +69,47 @@ class _SPHM_basic_infoState extends State<SPHM_basic_info> {
             //   }
             // ),
             ShortText(
-                context, "SPHM_DataSet", "a. ", "Population: ", "population", (SPHM_Data_MAP['SPHM_DataSet.population']).toString()),
+                context,
+                "SPHM_DataSet",
+                "a. ",
+                "Population: ",
+                "population",
+                (SPHM_Data_MAP['SPHM_DataSet.population']).toString()),
             ShortText(
                 context,
                 "SPHM_DataSet",
                 "b. ",
                 "Number of PHMs under supervision: ",
                 "NoOf_PHM_UnderSupervision",
-                (SPHM_Data_MAP['SPHM_DataSet.NoOf_PHM_UnderSupervision']).toString()),
-            ShortText(context, "SPHM_DataSet", "c. ",
-                "DAte of first appointment to this area: ", "dateFirstAppointment",
-                (SPHM_Data_MAP['SPHM_DataSet.dateFirstAppointment']).toString()),
-            ShortText(context, "SPHM_DataSet", "d. ",
-                "Date of first appointment: ", "dateAppointmentToArea",
-                (SPHM_Data_MAP['SPHM_DataSet.durationOfServiceAs_SPHM']).toString()),
+                (SPHM_Data_MAP['SPHM_DataSet.NoOf_PHM_UnderSupervision'])
+                    .toString()),
+            ShortText(
+                context,
+                "SPHM_DataSet",
+                "c. ",
+                "DAte of first appointment to this area: ",
+                "dateFirstAppointment",
+                (SPHM_Data_MAP['SPHM_DataSet.dateFirstAppointment'])
+                    .toString()),
+            ShortText(
+                context,
+                "SPHM_DataSet",
+                "d. ",
+                "Date of first appointment: ",
+                "dateAppointmentToArea",
+                (SPHM_Data_MAP['SPHM_DataSet.durationOfServiceAs_SPHM'])
+                    .toString()),
             ShortText(
                 context,
                 "SPHM_DataSet",
                 "e. ",
                 "Duration of service as SPHM: ",
                 "durationOfServiceAs_SPHM",
-                (SPHM_Data_MAP['SPHM_DataSet.durationOfServiceAs_SPHM']).toString()),
-            const SizedBox(height: 12,),
+                (SPHM_Data_MAP['SPHM_DataSet.durationOfServiceAs_SPHM'])
+                    .toString()),
+            const SizedBox(
+              height: 12,
+            ),
             const Text(
               'f. Transport facilities:',
               style: TextStyle(fontSize: 16),
@@ -106,13 +122,16 @@ class _SPHM_basic_infoState extends State<SPHM_basic_info> {
               qNumber: "  i. ",
               question: "Is the SPHM provided with transport facilities: ",
             ),
-            const SizedBox(height: 8,),
+            const SizedBox(
+              height: 8,
+            ),
             LongAnswer1(
                 context,
                 "SPHM_DataSet",
                 '      (Scooter/Moped) :',
                 "SPHM_TransportMethod",
-                (SPHM_Data_MAP['SPHM_DataSet.SPHM_TransportMethod']).toString()),
+                (SPHM_Data_MAP['SPHM_DataSet.SPHM_TransportMethod'])
+                    .toString()),
             // ShortText(
             //     context,
             //     "SPHM_DataSet",
@@ -120,7 +139,9 @@ class _SPHM_basic_infoState extends State<SPHM_basic_info> {
             //     '(Scooter/Moped) :',
             //     "SPHM_TransportMethod",
             //     (SPHM_Data_MAP['SPHM_DataSet.SPHM_TransportMethod']).toString()),
-            const SizedBox(height: 8,),
+            const SizedBox(
+              height: 8,
+            ),
             YesNo(
               DataSetName_nd_vari: "SPHM_DataSet.DoesSPHM_UseIt",
               qNumber: "  ii. ",
@@ -131,7 +152,8 @@ class _SPHM_basic_infoState extends State<SPHM_basic_info> {
                 "SPHM_DataSet",
                 '  iii. if not, reason for not using transport facility',
                 "ReasonFrNtUsingTransFacility",
-                (SPHM_Data_MAP['SPHM_DataSet.ReasonFrNtUsingTransFacility']).toString()),
+                (SPHM_Data_MAP['SPHM_DataSet.ReasonFrNtUsingTransFacility'])
+                    .toString()),
             YesNo(
               DataSetName_nd_vari: "SPHM_DataSet.SPHM_inFullUniform",
               qNumber: "g. ",

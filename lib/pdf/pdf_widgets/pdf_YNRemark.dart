@@ -82,6 +82,7 @@ double pdfYNRemark(
       }
   }
   horiStartPosi = horiStartPosi + H_Q_Startposi;
+
   //Q
   switch (QlineNum) {
     case 1:
@@ -126,7 +127,7 @@ double pdfYNRemark(
   }
 
   //final double size1 = contentFont.measureString(Q).width;
-  horiStartPosi = horiStartPosi + H_Q_Endposi +3;
+  horiStartPosi = horiStartPosi + H_Q_Endposi + 3;
   //Qend colon
   PdfTextElement(text: ':', font: contentFont).draw(
       page: page, bounds: Rect.fromLTWH(horiStartPosi, currentHeight, 0, 0))!;
@@ -137,6 +138,16 @@ double pdfYNRemark(
   horiStartPosi = horiStartPosi + H_A_rem_startposi;
 
   //remark
+  // List<String> Answerlist = getDecomposedRemark(a_rmk_variName);
+
+  // PdfTextElement(text: Answerlist[0], font: contentFont).draw(
+  //     page: page,
+  //     bounds: Rect.fromLTWH(horiStartPosi + 10, currentHeight, 0, 0))!;
+
+  // PdfTextElement(text: Answerlist[1], font: contentFont).draw(
+  //     page: page,
+  //     bounds: Rect.fromLTWH(horiStartPosi + 10, currentHeight, 0, 0))!;
+
   PdfTextElement(text: SPHM_Data_MAP[a_rmk_variName]!, font: contentFont).draw(
       page: page,
       bounds: Rect.fromLTWH(horiStartPosi + 10, currentHeight, 0, 0))!;
@@ -150,7 +161,38 @@ double pdfYNRemark(
   } else if (QlineNum == 5) {
     currentHeight = currentHeight + 18 * 4;
   } else {
-    currentHeight = currentHeight + 18 * 0;          //
+    currentHeight = currentHeight + 18 * 0; //
   }
   return currentHeight;
 }
+
+// //approximately remaninig length in pt is 180 for remarks
+// List<String> getDecomposedRemark(String a_rmk_variName) {
+//   List<String> list = ["", ""];
+
+//   String STR = SPHM_Data_MAP[a_rmk_variName].toString();
+
+//   int lastSpaceCount = 0;
+//   for (int i = 0; i < SPHM_Data_MAP[a_rmk_variName].toString().length; i++) {
+//     if (STR[i] == " " && i < 22) {
+//       lastSpaceCount++;
+//     }
+//   }
+
+//   String temp1 = "";
+//   for (int i = 0; i < lastSpaceCount; i++) {
+//     temp1 += STR[i];
+//   }
+
+//   list[0] = temp1;
+
+//   String temp2 = "";
+//   for (int i = lastSpaceCount;
+//       i < SPHM_Data_MAP[a_rmk_variName].toString().length;
+//       i++) {
+//     temp2 += STR[i];
+//   }
+//   list[1] = temp2;
+
+//   return list;
+// }

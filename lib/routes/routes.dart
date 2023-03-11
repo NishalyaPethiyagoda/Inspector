@@ -6,7 +6,7 @@ import 'package:project/app_tree//screens/register.dart';
 import 'package:project/app_tree//screens/home.dart';
 import'package:project/app_tree/screens/profile_sc.dart';
 import 'package:project/app_tree//home/SPHMi/SPHMidwifeSec.dart';
-import 'package:project/app_tree/home/SPHMi/0/zero.dart';
+import 'package:project/app_tree/home/SPHMi/0.dart';
 import 'package:project/app_tree/home/SPHMi/1.dart';
 import 'package:project/app_tree/home/SPHMi/2.dart';
 import 'package:project/app_tree/home/SPHMi/3.dart';
