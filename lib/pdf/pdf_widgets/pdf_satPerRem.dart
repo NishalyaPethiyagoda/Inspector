@@ -4,8 +4,8 @@ import 'dart:io';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:project/app_tree/data/SPHM/SPHMidwifeDATA.dart';
-import 'package:project/pdf/vari_lines_count.dart';
-import 'package:project/pdf/spacingQs.dart';
+import 'package:project/pdf/functions/vari_lines_count.dart';
+import 'package:project/pdf/functions/spacingQs.dart';
 
 double pdfSatPerRemark(
   double currentHeight,
@@ -127,7 +127,7 @@ double pdfSatPerRemark(
   }
 
   //final double size1 = contentFont.measureString(Q).width;
-  horiStartPosi = horiStartPosi + H_Q_Endposi +3;
+  horiStartPosi = horiStartPosi + H_Q_Endposi + 3;
   //Qend colon
   PdfTextElement(text: ':', font: contentFont).draw(
       page: page, bounds: Rect.fromLTWH(horiStartPosi, currentHeight, 0, 0))!;
@@ -154,7 +154,7 @@ double pdfSatPerRemark(
   } else if (QlineNum == 5) {
     currentHeight = currentHeight + 18 * 4;
   } else {
-    currentHeight = currentHeight + 18 * 0;          //
+    currentHeight = currentHeight + 18 * 0; //
   }
   return currentHeight;
 }

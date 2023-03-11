@@ -4,8 +4,8 @@ import 'dart:io';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:project/app_tree/data/SPHM/SPHMidwifeDATA.dart';
-import 'package:project/pdf/vari_lines_count.dart';
-import 'package:project/pdf/spacingQs.dart';
+import 'package:project/pdf/functions/vari_lines_count.dart';
+import 'package:project/pdf/functions/spacingQs.dart';
 
 double pdfYNRemark(
   double currentHeight,

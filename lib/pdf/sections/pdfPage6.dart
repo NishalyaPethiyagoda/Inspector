@@ -49,24 +49,24 @@ void page6(PdfDocument document, PdfFont contentFont) {
       document,
       page,
       contentFont,
-      40,
+      20,
       40,
       4,
       'a.  To improve quality of service of PHMM :',
       'SPHM_DataSet.n1a');
-  currentPosiHeight = newPosiHeight + 12 * 4;
+  currentPosiHeight = newPosiHeight;
   //b
   newPosiHeight = positionedAnswers(
       currentPosiHeight,
       document,
       page,
       contentFont,
-      40,
+      20,
       40,
       3,
       'b.  To strengthen the managemnt information system :',
       'SPHM_DataSet.n1b');
-  currentPosiHeight = newPosiHeight + 12 * 4 + 4;
+  currentPosiHeight = newPosiHeight;
   //2
   newPosiHeight = positionedAnswers(
       currentPosiHeight,
@@ -79,40 +79,40 @@ void page6(PdfDocument document, PdfFont contentFont) {
       '2. Does she cooperate with other members of the staff maintaining the team spirit :',
       'SPHM_DataSet.n2');
   currentPosiHeight = newPosiHeight;
-  // //3
-  // newPosiHeight = positionedAnswers(
-  //     currentPosiHeight,
-  //     document,
-  //     page,
-  //     contentFont,
-  //     0,
-  //     40,
-  //     1,
-  //     '3. Interventions done to upgrade the health status in the field :',
-  //     'SPHM_DataSet.n3');
-  // currentPosiHeight = newPosiHeight;
-  // //4
-  // newPosiHeight = positionedAnswers(
-  //     currentPosiHeight,
-  //     document,
-  //     page,
-  //     contentFont,
-  //     0,
-  //     40,
-  //     1,
-  //     '4. Communication skills - Action taken to imporove her communication skills :',
-  //     'SPHM_DataSet.n4');
-  // currentPosiHeight = newPosiHeight;
-  // //5
-  // newPosiHeight = positionedAnswers(
-  //     currentPosiHeight,
-  //     document,
-  //     page,
-  //     contentFont,
-  //     0,
-  //     40,
-  //     1,
-  //     '5. Number of training programs participated during the last 2 years :',
-  //     'SPHM_DataSet.n4');
-  // currentPosiHeight = newPosiHeight;
+  //3
+  newPosiHeight = positionedAnswers(
+      currentPosiHeight,
+      document,
+      page,
+      contentFont,
+      0,
+      40,
+      1,
+      '3. Interventions done to upgrade the health status in the field :',
+      'SPHM_DataSet.n3');
+  currentPosiHeight = newPosiHeight;
+  //4
+  newPosiHeight = positionedAnswers(
+      currentPosiHeight,
+      document,
+      page,
+      contentFont,
+      0,
+      40,
+      1,
+      '4. Communication skills - Action taken to imporove her communication skills :',
+      'SPHM_DataSet.n4');
+  currentPosiHeight = newPosiHeight;
+  //5
+  newPosiHeight = positionedAnswers(
+      currentPosiHeight,
+      document,
+      page,
+      contentFont,
+      0,
+      40,
+      1,
+      '5. Number of training programs participated during the last 2 years :',
+      'SPHM_DataSet.n4');
+  currentPosiHeight = newPosiHeight;
 }

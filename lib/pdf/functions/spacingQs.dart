@@ -21,7 +21,7 @@ int spaceCount(
   } else {
     for (int i = 0; i < STR.length; i++) {
       int spaceNum = 0;
-      
+
       if (STR[i] == "") {
         count = count + 1;
       }
@@ -30,4 +30,3 @@ int spaceCount(
 
   return count;
 }
-

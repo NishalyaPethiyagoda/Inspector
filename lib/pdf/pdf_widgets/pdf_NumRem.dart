@@ -1,7 +1,7 @@
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 import 'package:flutter/material.dart';
 import 'package:project/app_tree/data/SPHM/SPHMidwifeDATA.dart';
-import 'package:project/pdf/vari_lines_count.dart';
+import 'package:project/pdf/functions/vari_lines_count.dart';
 
 double pdfNumRemark(
   double currentHeight,
