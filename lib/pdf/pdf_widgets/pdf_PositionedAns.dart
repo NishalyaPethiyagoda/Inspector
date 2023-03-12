@@ -15,6 +15,7 @@ double positionedAnswers(
     double q_horiStartPosi,
     double a_horiStartPosi,
     double a_NumberOfLines,
+    int a_maxLength,
     String Q,
     String variName) {
   double textlineH = totLineHeightFunc(SPHM_Data_MAP[variName]);
@@ -29,7 +30,7 @@ double positionedAnswers(
   //     .width; //answerlength = 435.276
 
   List<String> answers =
-      reshapeAnswer1(variName, 92); //92 charachters frm start to margin
+      reshapeAnswer1(variName, a_maxLength); //92 charachters frm start to margin
 
   for (int i = 0; i < answers.length; i++) {
     currentHeight += 14;
@@ -49,6 +50,7 @@ double IntegerPositionedAnswers(
     double q_horiStartPosi,
     double a_horiStartPosi,
     double a_NumberOfLines,
+    int a_maxLength,
     String Q,
     String variName) {
   double textlineH = totLineHeightFunc(SPHM_Data_MAP[variName]);
@@ -59,7 +61,7 @@ double IntegerPositionedAnswers(
       page: page, bounds: Rect.fromLTWH(q_horiStartPosi, currentHeight, 0, 0))!;
 
   List<List<String>> answers =
-      reshapeAnswer2(variName, 46); //92 charachters frm start to margin
+      reshapeAnswer2(variName, a_maxLength); //46 charachters frm start to margin
 
   for (int i = 0; i < answers.length; i++) {
     for (int j = 0; j < answers[i].length; j++) {

@@ -8,8 +8,7 @@ import 'package:project/app_tree/screens/home.dart';
 
 bool GlobalKey = true;
 
-void main() async 
-{
+void main() async {
   // if (GlobalKey) {
   WidgetsFlutterBinding.ensureInitialized();
   await SPHMSecureStorage.checkFirstTimeWrite();
