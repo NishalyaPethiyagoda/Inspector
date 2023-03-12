@@ -9,6 +9,8 @@ import 'package:project/pdf/sections/pdfPage3.dart';
 import 'package:project/pdf/sections/pdfPage4.dart';
 import 'package:project/pdf/sections/pdfPage5.dart';
 import 'package:project/pdf/sections/pdfPage6.dart';
+import 'package:project/pdf/sections/pdfPage7.dart';
+
 Future<void> createPDF() async {
   //Create a new PDF document
   PdfDocument document = PdfDocument();
@@ -31,6 +33,7 @@ Future<void> createPDF() async {
   page4(document, contentFont);
   page5(document, contentFont);
   page6(document, contentFont);
+  page7(document, contentFont);
   //double y = 0;
   // for (int i = 0; i < 700; i = i + 16) {
   //   page.graphics.drawRectangle(

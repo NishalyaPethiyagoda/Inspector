@@ -19,7 +19,7 @@ void page6(PdfDocument document, PdfFont contentFont) {
 
 // //
 //   ///
-// /////////////////////////////////////   section 6 ////////////////////////
+// /////////////////////////////////////   section 9 ////////////////////////
 //   ///
 //   //
   page.graphics.drawRectangle(
@@ -52,6 +52,7 @@ void page6(PdfDocument document, PdfFont contentFont) {
       20,
       40,
       4,
+      92,              //92 characters max
       'a.  To improve quality of service of PHMM :',
       'SPHM_DataSet.n1a');
   currentPosiHeight = newPosiHeight;
@@ -64,6 +65,7 @@ void page6(PdfDocument document, PdfFont contentFont) {
       20,
       40,
       3,
+      92,           //92 characters max 
       'b.  To strengthen the managemnt information system :',
       'SPHM_DataSet.n1b');
   currentPosiHeight = newPosiHeight;
@@ -76,6 +78,7 @@ void page6(PdfDocument document, PdfFont contentFont) {
       0,
       40,
       1,
+      92,           //92 characters max 
       '2. Does she cooperate with other members of the staff maintaining the team spirit :',
       'SPHM_DataSet.n2');
   currentPosiHeight = newPosiHeight;
@@ -88,6 +91,7 @@ void page6(PdfDocument document, PdfFont contentFont) {
       0,
       40,
       1,
+      92,             //92 characters max
       '3. Interventions done to upgrade the health status in the field :',
       'SPHM_DataSet.n3');
   currentPosiHeight = newPosiHeight;
@@ -100,6 +104,7 @@ void page6(PdfDocument document, PdfFont contentFont) {
       0,
       40,
       1,
+      92,            //92 characters max
       '4. Communication skills - Action taken to imporove her communication skills :',
       'SPHM_DataSet.n4');
   currentPosiHeight = newPosiHeight;
@@ -112,6 +117,7 @@ void page6(PdfDocument document, PdfFont contentFont) {
       0,
       40,
       1,
+      92,             //92 characters max
       '5. Number of training programs participated during the last 2 years :',
       'SPHM_DataSet.n4');
   currentPosiHeight = newPosiHeight;
@@ -148,12 +154,12 @@ void page6(PdfDocument document, PdfFont contentFont) {
     bounds: Rect.fromLTWH(topicleft + 265, currentPosiHeight, 0, 0),
     //topicLeft + 265 is an assumed value
   );
-  
+  currentPosiHeight += 12;
   //1
   newPosiHeight = IntegerPositionedAnswers(currentPosiHeight, document, page,
-      contentFont, 0, 0, 1, '', 'SPHM_DataSet.t1');
+      contentFont, 0, 0, 1, 46, '', 'SPHM_DataSet.t1');
   //currentPosiHeight = newPosiHeight;
   //2
   newPosiHeight = IntegerPositionedAnswers(currentPosiHeight, document, page,
-      contentFont, 0, 265, 1, '', 'SPHM_DataSet.t2');
+      contentFont, 0, 265, 1, 46, '', 'SPHM_DataSet.t2');
 }
