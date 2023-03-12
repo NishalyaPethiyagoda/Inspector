@@ -26,14 +26,14 @@ void page6(PdfDocument document, PdfFont contentFont) {
       brush: PdfSolidBrush(PdfColor(51, 190, 615)),
       bounds: Rect.fromLTWH(0, currentPosiHeight, page.size.width - 60, 20));
   //
-  double topic2Posi = currentPosiHeight + 1.5;
+  double topicPosi = currentPosiHeight + 1.5;
   const topicleft = 5.0;
 
   page.graphics.drawString(
     '9. Special services:',
     PdfStandardFont(PdfFontFamily.timesRoman, 16),
     brush: PdfSolidBrush(PdfColor(0, 0, 0)),
-    bounds: Rect.fromLTWH(topicleft, topic2Posi, 500, 50),
+    bounds: Rect.fromLTWH(topicleft, topicPosi, 500, 50),
   );
 
   currentPosiHeight = currentPosiHeight + 35;
@@ -115,4 +115,45 @@ void page6(PdfDocument document, PdfFont contentFont) {
       '5. Number of training programs participated during the last 2 years :',
       'SPHM_DataSet.n4');
   currentPosiHeight = newPosiHeight;
+
+  ///////////////////////////////// section 10 ////////////////////////////
+  currentPosiHeight += 14;
+
+  page.graphics.drawRectangle(
+      brush: PdfSolidBrush(PdfColor(51, 190, 615)),
+      bounds: Rect.fromLTWH(0, currentPosiHeight, page.size.width - 60, 20));
+  //
+  topicPosi = currentPosiHeight + 1.5;
+
+  page.graphics.drawString(
+    '10. Strong and weak points identified during the supervision:',
+    PdfStandardFont(PdfFontFamily.timesRoman, 16),
+    brush: PdfSolidBrush(PdfColor(0, 0, 0)),
+    bounds: Rect.fromLTWH(topicleft, topicPosi, 500, 50),
+  );
+
+  currentPosiHeight += 35;
+  horiStartPosi = horiStartPosi;
+
+  page.graphics.drawString(
+    'Strong Points:',
+    PdfStandardFont(PdfFontFamily.timesRoman, 12),
+    brush: PdfSolidBrush(PdfColor(0, 0, 0)),
+    bounds: Rect.fromLTWH(topicleft, currentPosiHeight, 0, 0),
+  );
+  page.graphics.drawString(
+    'Weak Points:',
+    PdfStandardFont(PdfFontFamily.timesRoman, 12),
+    brush: PdfSolidBrush(PdfColor(0, 0, 0)),
+    bounds: Rect.fromLTWH(topicleft + 265, currentPosiHeight, 0, 0),
+    //topicLeft + 265 is an assumed value
+  );
+  
+  //1
+  newPosiHeight = IntegerPositionedAnswers(currentPosiHeight, document, page,
+      contentFont, 0, 0, 1, '', 'SPHM_DataSet.t1');
+  //currentPosiHeight = newPosiHeight;
+  //2
+  newPosiHeight = IntegerPositionedAnswers(currentPosiHeight, document, page,
+      contentFont, 0, 265, 1, '', 'SPHM_DataSet.t2');
 }

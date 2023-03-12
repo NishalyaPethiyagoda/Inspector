@@ -29,13 +29,46 @@ double positionedAnswers(
   //     .width; //answerlength = 435.276
 
   List<String> answers =
-      reshapeAnswer(variName, 92); //92 charachters frm start to margin
+      reshapeAnswer1(variName, 92); //92 charachters frm start to margin
 
   for (int i = 0; i < answers.length; i++) {
     currentHeight += 14;
     PdfTextElement(text: answers[i], font: contentFont).draw(
         page: page,
         bounds: Rect.fromLTWH(a_horiStartPosi, currentHeight, 0, 0))!;
+  }
+  return currentHeight;
+}
+
+//create a point wise answer considering integer points
+double IntegerPositionedAnswers(
+    double currentHeight,
+    PdfDocument document,
+    PdfPage page,
+    PdfFont contentFont,
+    double q_horiStartPosi,
+    double a_horiStartPosi,
+    double a_NumberOfLines,
+    String Q,
+    String variName) {
+  double textlineH = totLineHeightFunc(SPHM_Data_MAP[variName]);
+
+  //currentHeight = currentHeight + textlineH;
+  currentHeight += 18;
+  PdfTextElement(text: Q, font: contentFont).draw(
+      page: page, bounds: Rect.fromLTWH(q_horiStartPosi, currentHeight, 0, 0))!;
+
+  List<List<String>> answers =
+      reshapeAnswer2(variName, 46); //92 charachters frm start to margin
+
+  for (int i = 0; i < answers.length; i++) {
+    for (int j = 0; j < answers[i].length; j++) {
+      PdfTextElement(text: answers[i][j], font: contentFont).draw(
+          page: page,
+          bounds: Rect.fromLTWH(a_horiStartPosi, currentHeight, 0, 0))!;
+      currentHeight += 14;
+    }
+    currentHeight += 14;
   }
   return currentHeight;
 }
